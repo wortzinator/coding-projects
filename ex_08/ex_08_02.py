@@ -7,7 +7,7 @@ hname = open(fname)
 for line in hname:
     line = line.rstrip()
     if line.startswith('From '):
-        print(line)
+        print(line.split()[1])
         count = count + 1
     if not line.startswith('From ') :
         continue
