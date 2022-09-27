@@ -1,11 +1,15 @@
 fname = input("Enter file name: ")
 fh = open(fname)
-lst = list(fh)
-for line in lst:
-    line = line.strip()
-    lines = line.split()
-    print(lines)
-    #print(lines.split())
+str = fh.read()
+wrd = str.split()
+wrd.sort()
+
+final = []
+for i in wrd:
+    if i not in final:
+        final.append(i)
+
+print(final)
 
 
 
@@ -14,6 +18,21 @@ for line in lst:
 
 
 
+
+
+#lst = list(fh)
+#for wrd in lst:
+#    wrds = wrd.split()
+#    print(wrds)
+#    #print(lines.split())
+
+#fname = input("Enter file name: ")
+#fh = open(fname)
+#lst = list(fh)
+#for wrd in lst:
+#    lst = fh.strip()
+#    slst = lst.sort()
+#print(slst) 
 
 
 
