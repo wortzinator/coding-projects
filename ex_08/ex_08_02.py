@@ -1,8 +1,8 @@
 fname = input("Enter file name: ")
-text_file = open(fname)#
-str = text_file.read()#
+if len(fname) < 1:
+    fname = "mbox-short.txt"
 
-testArray = str.split()#
+fh = open(fname)
+count = 0
 
-testArray.sort()#
-print(testArray)
+print("There were", count, "lines in the file with From as the first word")
