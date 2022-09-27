@@ -1,6 +1,8 @@
 fname = input("Enter file name: ")
-fh = open(fname)
-lst = list()
-for line in fh:
-    print(line.strip())
+text_file = open(fname)#
+str = text_file.read()#
 
+testArray = str.split()#
+
+testArray.sort()#
+print(testArray)
