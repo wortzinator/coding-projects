@@ -3,8 +3,6 @@ if len(name) < 1 : name = 'mbox-short.txt'
 handle = open(name)
 di = dict()
 
-
-
 for line in handle:
     line = line.rstrip()
     if line.startswith('From '):
@@ -18,7 +16,6 @@ for line in handle:
         continue
 #print(di)
 
-
 bigcount = None
 bigword = None
 for word,count in di.items():
@@ -28,33 +25,6 @@ for word,count in di.items():
 
 print(bigword, bigcount)
 
-
-
-
-
-
-
-
-#for wrds in line:
-#    w = wrds.split()
-#    print(w)
-
-
-
-#print(line)
-
-
-
-
-
-
-
-
-
-
-
- 
-#print(x)
 
 
 
