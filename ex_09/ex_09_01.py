@@ -1,14 +1,32 @@
 name = input("Enter file:")
+if len(name) < 1 : name = 'mbox-short.txt'
 handle = open(name)
-x = dict()
-if len(name) < 1:
-    name = "mbox-short.txt"
+di = dict()
+
+
+
 for line in handle:
     line = line.rstrip()
-    if line.startswith('From'):
-        print(line.split()[1])
-    if not line.startswith('From'):
+    if line.startswith('From '):
+        line = line.split()[1]
+        if line in di:
+            di[line] = di.get(line,0) + 1
+        else:
+            di[line] = 1
+        #print(line,di[line])
+    else:
         continue
+#print(di)
+
+
+bigcount = None
+bigword = None
+for word,count in di.items():
+    if bigcount is None or count > bigcount:
+        bigword = word
+        bigcount = count
+
+print(bigword, bigcount)
 
 
 
@@ -17,7 +35,26 @@ for line in handle:
 
 
 
-print(handle)
+#for wrds in line:
+#    w = wrds.split()
+#    print(w)
+
+
+
+#print(line)
+
+
+
+
+
+
+
+
+
+
+
+ 
+#print(x)
 
 
 
