@@ -1,7 +1,3 @@
-from re import T
-from xmlrpc.client import TRANSPORT_ERROR
-
-
 name = input("Enter file:")
 if len(name) < 1:
     name = "mbox-short.txt"
