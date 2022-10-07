@@ -1,3 +1,15 @@
+fhand = input("Enter File Name: ")
+if len(fhand) < 1:
+    fhand = "regex-sum-42.txt"
+hand = open(fhand)
+for line in hand:
+    line = line.rsplit()
+    print(line)
+
+
+
+
+
 
 
 
