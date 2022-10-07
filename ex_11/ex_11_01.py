@@ -1,11 +1,13 @@
-fhand = input("Enter File Name: ")
-if len(fhand) < 1:
-    fhand = "regex-sum-42.txt"
-hand = open(fhand)
-for line in hand:
-    line = line.rsplit()
-    print(line)
+import re
 
+name = input("Enter File Name: ")
+if len(name) < 1:
+    name = "pls-work.txt"
+fhand = open(name)
+for line in fhand:
+    line = line.rsplit()
+    nmb = re.findall('0-9+', line)
+    print(nmb)
 
 
 
@@ -47,6 +49,7 @@ for line in hand:
 # anywhere in the line. There can be any number of numbers in each line (including none).
 
 #Handling The Data
+
 #The basic outline of this problem is to read the file, look for 
 #integers using the re.findall(), looking for a regular expression of 
 #'[0-9]+' and then converting the extracted strings to integers and summing up the integers.
