@@ -6,8 +6,8 @@ if len(name) < 1:
 fhand = open(name)
 for line in fhand:
     line = line.rsplit()
-    nmb = re.findall('0-9+', line)
-    print(nmb)
+    re.findall('[0-9]+', line)
+    print(line)
 
 
 
