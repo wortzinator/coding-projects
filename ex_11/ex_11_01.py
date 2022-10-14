@@ -4,13 +4,25 @@ name = input("Enter File Name: ")
 if len(name) < 1:
     name = "pls-work.txt"
 fhand = open(name)
+
+lst = []
+
 for line in fhand:
+<<<<<<< HEAD
     line = line.rsplit()
     re.findall('[0-9]+', line)
     print(line)
 
 
+=======
+    line = line.strip()
+    nmb = re.findall('[0-9]+', line)
+    if len(nmb) > 0:
+        for x in nmb:
+            lst.append(int(x))
+>>>>>>> fbb22fb (added macbook work)
 
+print(sum(lst))
 
 
 
@@ -50,6 +62,5 @@ for line in fhand:
 
 #Handling The Data
 
-#The basic outline of this problem is to read the file, look for 
-#integers using the re.findall(), looking for a regular expression of 
-#'[0-9]+' and then converting the extracted strings to integers and summing up the integers.
+#The basic outline of this problem is to read the file, look for integers using the re.findall(), 
+# looking for a regular expression of '[0-9]+' and then converting the extracted strings to integers and summing up the integers.
