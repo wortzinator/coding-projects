@@ -8,19 +8,11 @@ fhand = open(name)
 lst = []
 
 for line in fhand:
-<<<<<<< HEAD
-    line = line.rsplit()
-    re.findall('[0-9]+', line)
-    print(line)
-
-
-=======
     line = line.strip()
     nmb = re.findall('[0-9]+', line)
     if len(nmb) > 0:
         for x in nmb:
             lst.append(int(x))
->>>>>>> fbb22fb (added macbook work)
 
 print(sum(lst))
 
