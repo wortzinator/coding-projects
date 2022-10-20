@@ -25,9 +25,9 @@ for a in range(len(data["comments"])): # 'a' is the deliminator, the 'range()' i
     value_list.append(value) # adding the value list to t he value_list dict
 
 #extracting the dictionary in list
-for item in value_list:
-    count += 1
-    number = int(item["count"])
-    num_list.append(number)
+for item in value_list: # item is iterating through the value_list divt
+    count += 1 # count is adding 1 to every new itme in value_list
+    number = int(item["count"]) # this is making the 'count' key in the new 'item' list an integer
+    num_list.append(number) # adding all of the integer 'number' to the num_list dict
 print('Count', count)
 print('Sum', sum(num_list))
